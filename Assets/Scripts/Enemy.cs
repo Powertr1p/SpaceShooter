@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private GameObject _laserBullet;
     [SerializeField] private float _projectileSpeed = 10f;
     [SerializeField] private GameObject _deathVFX;
+
     private void Start()
     {
         _shotCounter = Random.Range(_minTimeBetweenShots, _maxTimeBetweenShots);
