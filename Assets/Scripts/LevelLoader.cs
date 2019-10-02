@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
+    private int _currentScene = 1;
+
     public void LoadStartMenu()
     {
         SceneManager.LoadScene(0);
@@ -22,11 +24,16 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        int _currentScene = SceneManager.GetActiveScene().buildIndex;
+        _currentScene = SceneManager.GetActiveScene().buildIndex;
         if (_currentScene <= SceneManager.sceneCount - 1)
             SceneManager.LoadScene(_currentScene + 1);
         else
             SceneManager.LoadScene(0);
+    }
+
+    public void Retry()
+    {
+        SceneManager.LoadScene(_currentScene);
     }
 
     public void QuitGame()
