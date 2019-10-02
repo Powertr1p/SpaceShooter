@@ -99,11 +99,12 @@ MonoBehaviour:
   _health: 200
   _laserBullet: {fileID: 1612638013479822674, guid: 2a6fd97658d641c469499f2ffe351e1a,
     type: 3}
-  _projectileFiringPeriod: 0.1
+  _projectileFiringPeriod: 0.05
   _projectileSpeed: 20
   _shootingSound: {fileID: 8300000, guid: cc414d401765baa4ea46b84f8c80b8cc, type: 3}
+  _volumeShootSounds: 0.1
   _deathSound: {fileID: 8300000, guid: 15385eaf43a054c468b1796c16b3ad4f, type: 3}
-  _volumeSounds: 0.1
+  _volumeDeathSound: 0.5
 --- !u!60 &41706881506831975
 PolygonCollider2D:
   m_ObjectHideFlags: 0
