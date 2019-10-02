@@ -116,6 +116,10 @@ MonoBehaviour:
   _projectileSpeed: 10
   _deathVFX: {fileID: 3968005972714585188, guid: 83170c7b3d678504da575f2c08a84f45,
     type: 3}
+  _deathSound: {fileID: 8300000, guid: 875f58c82f403ec4584d5286b1bcaf5d, type: 3}
+  _ShootingSound: {fileID: 8300000, guid: c793502b87f8ef043adec0a68b053f39, type: 3}
+  _ShootingVolume: 0.5
+  _deathSoundVolume: 0.5
 --- !u!58 &8332465044342397331
 CircleCollider2D:
   m_ObjectHideFlags: 0

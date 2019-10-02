@@ -5,15 +5,23 @@ using UnityEngine.Audio;
 
 public class Enemy : MonoBehaviour
 {
+    [Header("Enemy Config")]
     [SerializeField] private float _health = 100;
     [SerializeField] private float _shotCounter;
     [SerializeField] private float _minTimeBetweenShots = 0.2f;
     [SerializeField] private float _maxTimeBetweenShots = 3.0f;
 
+    [Header("Enemy Shooting")]
     [SerializeField] private GameObject _laserBullet;
     [SerializeField] private float _projectileSpeed = 10f;
-    [SerializeField] private GameObject _deathVFX;
 
+    [Header("Enemy Sounds")]
+    [SerializeField] private GameObject _deathVFX;
+    [SerializeField] private AudioClip _deathSound;
+    [SerializeField] [Range(0, 1)] private float _deathSoundVolume = 0.75f;
+    [SerializeField] private AudioClip _ShootingSound;
+    [SerializeField] [Range(0, 1)] private float _ShootingVolume = 0.50f;
+    
     private void Start()
     {
         _shotCounter = Random.Range(_minTimeBetweenShots, _maxTimeBetweenShots);
@@ -37,6 +45,7 @@ public class Enemy : MonoBehaviour
     private void Fire()
     {
         GameObject laser = Instantiate(_laserBullet, transform.position, Quaternion.identity) as GameObject;
+        AudioSource.PlayClipAtPoint(_ShootingSound, Camera.main.transform.position, _ShootingVolume);
         laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -_projectileSpeed);
     }
 
@@ -62,5 +71,6 @@ public class Enemy : MonoBehaviour
         Destroy(gameObject);
         GameObject _explosion = Instantiate(_deathVFX, transform.position, transform.rotation) as GameObject;
         Destroy(_explosion, 1f);
+        AudioSource.PlayClipAtPoint(_deathSound, Camera.main.transform.position, _deathSoundVolume);
     }
 }
