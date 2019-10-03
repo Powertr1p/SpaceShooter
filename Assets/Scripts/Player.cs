@@ -2,10 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
-    //config params
+    public UnityEvent OnPlayerDeath;
+
     [Header("Player")]
     [SerializeField] private float _moveSpeedPerUnit = 10f;
     [SerializeField] private float _padding = 0.49f;
@@ -106,7 +108,6 @@ public class Player : MonoBehaviour
     {
         AudioSource.PlayClipAtPoint(_deathSound, Camera.main.transform.position, _volumeDeathSound);
         Destroy(gameObject);
-        LevelLoader _level = new LevelLoader();
-        _level.LoadGameOver();
+        OnPlayerDeath.Invoke();
     }
 }

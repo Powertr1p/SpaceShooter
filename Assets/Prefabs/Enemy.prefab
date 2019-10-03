@@ -13,6 +13,9 @@ GameObject:
   - component: {fileID: 5508433384276681927}
   - component: {fileID: -4420749655722827451}
   - component: {fileID: 7702651439343096740}
+  - component: {fileID: 3332454141699157235}
+  - component: {fileID: -1265292031184856763}
+  - component: {fileID: 823896378775994732}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
@@ -117,9 +120,9 @@ MonoBehaviour:
   _deathVFX: {fileID: 3968005972714585188, guid: 83170c7b3d678504da575f2c08a84f45,
     type: 3}
   _deathSound: {fileID: 8300000, guid: 875f58c82f403ec4584d5286b1bcaf5d, type: 3}
+  _deathSoundVolume: 0.5
   _ShootingSound: {fileID: 8300000, guid: c182725205df820438aae4eb4aa663c2, type: 3}
   _ShootingVolume: 0.5
-  _deathSoundVolume: 0.5
 --- !u!58 &7702651439343096740
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -130,9 +133,56 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.01228258, y: -0.012282848}
   serializedVersion: 2
   m_Radius: 0.3951266
+--- !u!50 &3332454141699157235
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422841661512381847}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &-1265292031184856763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422841661512381847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c62e31644de37da4b8ff9c648f9fd69a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 200
+--- !u!114 &823896378775994732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422841661512381847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c62e31644de37da4b8ff9c648f9fd69a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 100
