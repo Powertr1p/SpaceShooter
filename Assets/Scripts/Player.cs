@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float _moveSpeedPerUnit = 10f;
     [SerializeField] private float _padding = 0.49f;
     [SerializeField] private int _health = 200;
+    public int Health { get { return _health; } }
 
     [Header("Projectile")]
     [SerializeField] private GameObject _laserBullet;

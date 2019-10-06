@@ -16,6 +16,7 @@ public class LevelLoader : MonoBehaviour
     public void LoadGame()
     {
         SceneManager.LoadScene("Game");
+        FindObjectOfType<GameSession>().ResetGame();
     }
 
     public IEnumerator LoadGameOverScreen()
