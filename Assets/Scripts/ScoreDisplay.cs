@@ -16,6 +16,7 @@ public class ScoreDisplay : MonoBehaviour
 
     void Update()
     {
-        _scoreText.text = _gameSession.GetScore().ToString();
+        if (_scoreText != null)
+            _scoreText.text = _gameSession.GetScore().ToString();
     }
 }

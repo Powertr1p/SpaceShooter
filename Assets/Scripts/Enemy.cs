@@ -30,10 +30,10 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        CountDownAndShoot();
+        CountdownAndShoot();
     }
 
-    private void CountDownAndShoot()
+    private void CountdownAndShoot()
     {
         _shotCounter -= Time.deltaTime;
         if (_shotCounter <= 0f)

@@ -2,11 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameSession : MonoBehaviour
 {
-    public delegate void ScoreAdd(int score);
     private int _score = 0;
+
     [SerializeField] private GameObject _pauseMenu;
     [SerializeField] private bool _isPaused;
 

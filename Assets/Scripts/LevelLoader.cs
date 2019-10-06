@@ -42,6 +42,7 @@ public class LevelLoader : MonoBehaviour
     public void Retry()
     {
         SceneManager.LoadScene(_currentScene);
+        FindObjectOfType<GameSession>().ResetGame();
     }
 
     public void QuitGame()
