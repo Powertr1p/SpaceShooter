@@ -90,9 +90,26 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        DamageDealer _damageDealer = collision.gameObject.GetComponent<DamageDealer>();
-        if (!_damageDealer) { return; }
-        ProcessHit(_damageDealer);
+        if (collision.gameObject.GetComponent<DamageDealer>())
+        {
+            DamageDealer _damageDealer = collision.gameObject.GetComponent<DamageDealer>();
+            ProcessHit(_damageDealer);
+        }
+        else if (collision.gameObject.GetComponent<PowerUp>())
+        {
+            PowerUp _powerUp = collision.gameObject.GetComponent<PowerUp>();
+            _powerUp.ActivatePowerUp();
+            Destroy(_powerUp.gameObject);
+            StartCoroutine(PowerUpTimer()); // это тоже должно быть не тут
+        }
+    }
+   
+    //перенести логику в нужное место (гейм сейшн?)
+    private IEnumerator PowerUpTimer()
+    {
+        yield return new WaitForSeconds(3f);
+        Shield _shield = FindObjectOfType<Shield>();
+        Destroy(_shield.gameObject);
     }
 
     private void ProcessHit(DamageDealer _damageDealer)
