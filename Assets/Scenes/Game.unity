@@ -720,36 +720,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 782436638826958578, guid: f60db09de8178624889bf9d803d0af66,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -7.97
-      objectReference: {fileID: 0}
-    - target: {fileID: 782436638826958578, guid: f60db09de8178624889bf9d803d0af66,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 4.34
-      objectReference: {fileID: 0}
-    - target: {fileID: 7555957843006651106, guid: f60db09de8178624889bf9d803d0af66,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7555957843006651106, guid: f60db09de8178624889bf9d803d0af66,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 4.53
-      objectReference: {fileID: 0}
-    - target: {fileID: 5992991169849971173, guid: f60db09de8178624889bf9d803d0af66,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -8.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 5992991169849971173, guid: f60db09de8178624889bf9d803d0af66,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.33
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f60db09de8178624889bf9d803d0af66, type: 3}
 --- !u!1 &1392985266
@@ -2249,6 +2219,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameSession
       objectReference: {fileID: 0}
+    - target: {fileID: 9176562592959739616, guid: aecdec79af95fc2499bd878eefc23c23,
+        type: 3}
+      propertyPath: _pauseMenu
+      value: 
+      objectReference: {fileID: 711612187}
     - target: {fileID: 9176562592959739617, guid: aecdec79af95fc2499bd878eefc23c23,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2304,10 +2279,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9176562592959739616, guid: aecdec79af95fc2499bd878eefc23c23,
-        type: 3}
-      propertyPath: _pauseMenu
-      value: 
-      objectReference: {fileID: 711612187}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aecdec79af95fc2499bd878eefc23c23, type: 3}
