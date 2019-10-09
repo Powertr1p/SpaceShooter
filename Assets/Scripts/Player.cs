@@ -99,18 +99,9 @@ public class Player : MonoBehaviour
         {
             PowerUp _powerUp = collision.gameObject.GetComponent<PowerUp>();
             _powerUp.ActivatePowerUp();
-            Destroy(_powerUp.gameObject);
-            StartCoroutine(PowerUpTimer()); // это тоже должно быть не тут
+            Destroy(_powerUp.gameObject.GetComponent<SpriteRenderer>());
         }
-    }
-   
-    //перенести логику в нужное место (гейм сейшн?)
-    private IEnumerator PowerUpTimer()
-    {
-        yield return new WaitForSeconds(3f);
-        Shield _shield = FindObjectOfType<Shield>();
-        Destroy(_shield.gameObject);
-    }
+    }   
 
     private void ProcessHit(DamageDealer _damageDealer)
     {

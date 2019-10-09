@@ -13,4 +13,16 @@ public class PowerupSpawner : MonoBehaviour
     {
         
     }
+
+    private void ChoosePowerUp()
+    {
+
+    }
+
+    private void SpawnPowerUp()
+    {
+        ChoosePowerUp();
+    }
+
+
 }

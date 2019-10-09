@@ -19,4 +19,9 @@ public class PowerUp : MonoBehaviour
     {
         Instantiate(_shield, _player.transform);
     }
+
+    private void SpawnPowerUp()
+    {
+        
+    }
 }

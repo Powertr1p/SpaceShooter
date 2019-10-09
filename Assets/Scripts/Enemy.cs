@@ -5,6 +5,8 @@ using UnityEngine.Events;
 
 public class Enemy : MonoBehaviour
 {
+    public UnityEvent OnDeath;
+
     [Header("Stats Config")]
     [SerializeField] private float _health = 100;
     [SerializeField] private int _scoreValue = 150;
@@ -74,5 +76,6 @@ public class Enemy : MonoBehaviour
         GameObject _explosion = Instantiate(_deathVFX, transform.position, transform.rotation) as GameObject;
         Destroy(_explosion, 1f);
         AudioSource.PlayClipAtPoint(_deathSound, Camera.main.transform.position, _deathSoundVolume);
+        OnDeath.Invoke(); // воткнуть сюда спавн поверапа
     }
 }
