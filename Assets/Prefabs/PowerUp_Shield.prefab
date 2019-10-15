@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _shield: {fileID: 4613645958470267771, guid: 364fa2d3ff51ea744bd067a724383b10, type: 3}
-  _player: {fileID: 3697302695536669529, guid: 2ae03227016788841a242ece7a56fabe, type: 3}
+  _player: {fileID: 0}
 --- !u!50 &8379860587808948027
 Rigidbody2D:
   serializedVersion: 4
