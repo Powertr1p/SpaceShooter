@@ -4,30 +4,20 @@ using UnityEngine;
 
 public class PowerupSpawner : MonoBehaviour
 {
-    [SerializeField] GameObject _powerUp;
-    
+    [SerializeField] GameObject[] _powerUp;
+    [SerializeField] private int _spawnChance = 3;
 
-    void Start()
+    private int ChoosePowerUp()
     {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
-    private void ChoosePowerUp()
-    {
-
+        return Random.Range(0, _powerUp.Length);
     }
 
     public void SpawnPowerUp(Vector3 enemyDiedPosition)
     {
         int chance = Random.Range(0, 101);
-        if (chance <= 5)
+        if (chance <= _spawnChance)
         { 
-           GameObject powerUp = Instantiate(_powerUp, enemyDiedPosition, Quaternion.identity) as GameObject;
+           GameObject powerUp = Instantiate(_powerUp[ChoosePowerUp()], enemyDiedPosition, Quaternion.identity) as GameObject;
         }
     }
 }

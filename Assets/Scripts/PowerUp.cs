@@ -5,13 +5,15 @@ using UnityEngine;
 public class PowerUp : MonoBehaviour
 {
     [SerializeField] private GameObject _shield;
-     private Player _player;
-
-    private float _fallingSpeed = 0.1f;
+    private Exterminatus _killAll;
+    private Player _player;
+    private float _fallingSpeed; 
 
     private void Start()
     {
         _player = FindObjectOfType<Player>();
+        _killAll = GetComponent<Exterminatus>();
+        _fallingSpeed = Random.Range(0.07f, 0.2f);
     }
 
     void Update()
@@ -22,7 +24,13 @@ public class PowerUp : MonoBehaviour
 
     public void ActivatePowerUp()
     {
-        GameObject _shieldPowerUp = Instantiate(_shield, _player.transform) as GameObject;
+        if (gameObject.tag == "PUShield")
+        { 
+            GameObject _shieldPowerUp = Instantiate(_shield, _player.transform) as GameObject;
+        }
+        if (gameObject.tag == "PUKillAll")
+        {
+            _killAll.HolyExterminate();
+        }
     }
-
 }

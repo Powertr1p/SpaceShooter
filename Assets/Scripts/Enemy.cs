@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class Enemy : MonoBehaviour
 {
-    public delegate void OnDeath (Vector3 pos);
+    public UnityAction MakeDead;
 
     [Header("Stats Config")]
     [SerializeField] private float _health = 100;
@@ -28,6 +28,7 @@ public class Enemy : MonoBehaviour
     private void Start()
     {
         _shotCounter = Random.Range(_minTimeBetweenShots, _maxTimeBetweenShots);
+        MakeDead += Die;
     }
 
     private void Update()
@@ -69,14 +70,8 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public Vector3 GetPosition()
-    {
-        return transform.position;
-    }
-
     private void Die()
     {
-
         FindObjectOfType<GameSession>().AddToScore(_scoreValue);
         Destroy(gameObject);
         GameObject _explosion = Instantiate(_deathVFX, transform.position, transform.rotation) as GameObject;
