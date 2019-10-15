@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class Enemy : MonoBehaviour
 {
-    public UnityEvent OnDeath;
+    public delegate void OnDeath (Vector3 pos);
 
     [Header("Stats Config")]
     [SerializeField] private float _health = 100;
@@ -69,13 +69,19 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    public Vector3 GetPosition()
+    {
+        return transform.position;
+    }
+
     private void Die()
     {
+
         FindObjectOfType<GameSession>().AddToScore(_scoreValue);
         Destroy(gameObject);
         GameObject _explosion = Instantiate(_deathVFX, transform.position, transform.rotation) as GameObject;
         Destroy(_explosion, 1f);
         AudioSource.PlayClipAtPoint(_deathSound, Camera.main.transform.position, _deathSoundVolume);
-        OnDeath.Invoke(); // воткнуть сюда спавн поверапа
+        FindObjectOfType<PowerupSpawner>().SpawnPowerUp(transform.position);
     }
 }

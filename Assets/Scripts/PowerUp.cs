@@ -7,7 +7,7 @@ public class PowerUp : MonoBehaviour
     [SerializeField] private GameObject _shield;
     [SerializeField] private Player _player;
 
-    private float _fallingSpeed = 0.3f;
+    private float _fallingSpeed = 0.1f;
 
     void Update()
     {
@@ -17,11 +17,7 @@ public class PowerUp : MonoBehaviour
 
     public void ActivatePowerUp()
     {
-        Instantiate(_shield, _player.transform);
+        GameObject _shieldPowerUp = Instantiate(_shield, _player.transform) as GameObject;
     }
 
-    private void SpawnPowerUp()
-    {
-        
-    }
 }

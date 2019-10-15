@@ -97,7 +97,8 @@ MonoBehaviour:
   OnPlayerDeath:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 694277024560321488, guid: f29b7a915db573a469c0d737627be9d5,
+          type: 3}
         m_MethodName: LoadGameOver
         m_Mode: 1
         m_Arguments:
@@ -107,7 +108,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   _moveSpeedPerUnit: 12

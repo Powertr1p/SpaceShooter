@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class LevelLoader : MonoBehaviour
 {
     [SerializeField] float delayInSeconds = 1.5f;
+    
     private int _currentScene = 1;
 
     public void LoadStartMenu()
