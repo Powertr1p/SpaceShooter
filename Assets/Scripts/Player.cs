@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
     [SerializeField] private AudioClip _deathSound;
     [SerializeField] [Range(0, 1)] private float _volumeDeathSound = 0.50f;
 
+    private Animator _animator;
     private Coroutine _firingCouroutine;
 
     private float _xMin;
@@ -35,6 +36,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         SetUpBoundaries();
+        _animator = this.GetComponent<Animator>();
     }
 
     private void Update()
@@ -105,6 +107,7 @@ public class Player : MonoBehaviour
 
     private void ProcessHit(DamageDealer _damageDealer)
     {
+        _animator.SetTrigger("getDamage");
         _health -= _damageDealer.GetDamage();
         _damageDealer.Hit();
         if (_health <= 0)

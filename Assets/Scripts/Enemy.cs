@@ -24,6 +24,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] [Range(0, 1)] private float _deathSoundVolume = 0.75f;
     [SerializeField] private AudioClip _ShootingSound;
     [SerializeField] [Range(0, 1)] private float _ShootingVolume = 0.50f;
+
+
     
     private void Start()
     {
@@ -62,6 +64,11 @@ public class Enemy : MonoBehaviour
 
     private void ProcessHit(DamageDealer _damageDealer)
     {
+        if (this.gameObject.tag == "bigboy")
+        {
+            BigBoyAnim _damageAnim = GetComponent<BigBoyAnim>();
+            _damageAnim.DamageAnim();
+        }
         _health -= _damageDealer.GetDamage();
         _damageDealer.Hit();
         if (_health <= 0)
