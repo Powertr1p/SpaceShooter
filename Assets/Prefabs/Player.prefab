@@ -114,6 +114,8 @@ MonoBehaviour:
   _moveSpeedPerUnit: 12
   _padding: 0.49
   _health: 200
+  _deathVFX: {fileID: 323316720282745304, guid: 03f1485d32e7b334691a9eee188d7512,
+    type: 3}
   _laserBullet: {fileID: 1612638013479822674, guid: 2a6fd97658d641c469499f2ffe351e1a,
     type: 3}
   _projectileFiringPeriod: 0.05

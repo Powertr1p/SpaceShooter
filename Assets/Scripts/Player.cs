@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float _moveSpeedPerUnit = 10f;
     [SerializeField] private float _padding = 0.49f;
     [SerializeField] private int _health = 200;
+    [SerializeField] private GameObject _deathVFX;
     public int Health { get { return _health; } }
 
     [Header("Projectile")]
@@ -27,6 +28,7 @@ public class Player : MonoBehaviour
 
     private Animator _animator;
     private Coroutine _firingCouroutine;
+    
 
     private float _xMin;
     private float _xMax;
@@ -118,6 +120,7 @@ public class Player : MonoBehaviour
 
     private void Die()
     {
+        GameObject _explosion = Instantiate(_deathVFX, transform.position, transform.rotation) as GameObject;
         AudioSource.PlayClipAtPoint(_deathSound, Camera.main.transform.position, _volumeDeathSound);
         Destroy(gameObject);
         OnPlayerDeath.Invoke();
