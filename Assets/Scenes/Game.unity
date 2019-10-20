@@ -451,7 +451,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1204691934}
         m_MethodName: ResumeGame
         m_Mode: 1
         m_Arguments:
@@ -590,7 +590,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1204691934}
         m_MethodName: ReturnToMainMenu
         m_Mode: 1
         m_Arguments:
@@ -641,6 +641,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1202735436}
   m_CullTransparentMesh: 0
+--- !u!114 &1204691934 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7373239739561625681, guid: 1062766363b991242b365d6ca644a6cc,
+    type: 3}
+  m_PrefabInstance: {fileID: 7373239739050582789}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 591a7518f84065e48b4bce9d533fcf55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1316525397
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1137,7 +1149,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1204691934}
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
@@ -1147,7 +1159,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1949925163
