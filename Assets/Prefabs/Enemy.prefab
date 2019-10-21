@@ -111,16 +111,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 100
-  _shotCounter: 0
-  _minTimeBetweenShots: 0
-  _maxTimeBetweenShots: 3
+  _scoreValue: 150
   _laserBullet: {fileID: 6439031490074948083, guid: 2a4b8d70fa3ee964d8e35f2347001282,
     type: 3}
   _projectileSpeed: 10
+  _minTimeBetweenShots: 0
+  _maxTimeBetweenShots: 3
   _deathVFX: {fileID: 3968005972714585188, guid: 83170c7b3d678504da575f2c08a84f45,
     type: 3}
   _deathSound: {fileID: 8300000, guid: 875f58c82f403ec4584d5286b1bcaf5d, type: 3}
-  _deathSoundVolume: 0.5
+  _deathSoundVolume: 0.75
   _ShootingSound: {fileID: 8300000, guid: c182725205df820438aae4eb4aa663c2, type: 3}
   _ShootingVolume: 0.5
 --- !u!58 &7702651439343096740

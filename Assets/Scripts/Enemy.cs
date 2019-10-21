@@ -21,12 +21,12 @@ public class Enemy : MonoBehaviour
     [Header("Sound Effects")]
     [SerializeField] private GameObject _deathVFX;
     [SerializeField] private AudioClip _deathSound;
-    [SerializeField] [Range(0, 1)] private float _deathSoundVolume = 0.75f;
+    [SerializeField] private float _deathSoundVolume = 0.75f;
     [SerializeField] private AudioClip _ShootingSound;
-    [SerializeField] [Range(0, 1)] private float _ShootingVolume = 0.50f;
+    [SerializeField] private float _ShootingVolume = 0.50f;
 
 
-    
+
     private void Start()
     {
         _shotCounter = Random.Range(_minTimeBetweenShots, _maxTimeBetweenShots);

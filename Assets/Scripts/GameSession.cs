@@ -9,7 +9,9 @@ public class GameSession : MonoBehaviour
     private int _score = 0;
 
     [SerializeField] private GameObject _pauseMenu;
+    [SerializeField] private GameObject _firstMenuScreen;
     [SerializeField] private bool _isPaused;
+    [SerializeField] private GameObject _optionsMenu;
 
     private void Awake()
     {
@@ -28,6 +30,8 @@ public class GameSession : MonoBehaviour
             {
                 _isPaused = true;
                 _pauseMenu.SetActive(true);
+                _firstMenuScreen.SetActive(true);
+                _optionsMenu.SetActive(false);
                 Time.timeScale = 0f;
             }
         }
@@ -66,11 +70,25 @@ public class GameSession : MonoBehaviour
 
     public void ReturnToMainMenu()
     {
+        ResumeGame();
+        ResetGame();
         FindObjectOfType<LevelLoader>().LoadStartMenu();
     }
 
     public void QuitGame()
     {
         FindObjectOfType<LevelLoader>().QuitGame();
+    }
+
+    public void OpenOptionsMenu()
+    {
+        _firstMenuScreen.SetActive(false);
+        _optionsMenu.SetActive(true);
+    }
+
+    public void BackToFirstMenu()
+    {
+        _optionsMenu.SetActive(false);
+        _firstMenuScreen.SetActive(true);
     }
 }
