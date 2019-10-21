@@ -1827,7 +1827,7 @@ MonoBehaviour:
   _powerUp:
   - {fileID: 8379860587808948016, guid: 1ac3070806a2fbb4b98dae3f6bfca2f9, type: 3}
   - {fileID: 1469801375406003485, guid: 07e330f18c74d3e4081f34b59ae29f4e, type: 3}
-  _spawnChance: 0
+  _spawnChance: 8
 --- !u!4 &1634579611
 Transform:
   m_ObjectHideFlags: 0

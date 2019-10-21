@@ -25,8 +25,6 @@ public class Enemy : MonoBehaviour
     [SerializeField] private AudioClip _ShootingSound;
     [SerializeField] private float _ShootingVolume = 0.50f;
 
-
-
     private void Start()
     {
         _shotCounter = Random.Range(_minTimeBetweenShots, _maxTimeBetweenShots);

@@ -13,12 +13,12 @@ public class PowerUp : MonoBehaviour
     {
         _player = FindObjectOfType<Player>();
         _killAll = GetComponent<Exterminatus>();
-        _fallingSpeed = Random.Range(0.07f, 0.2f);
+        _fallingSpeed = Random.Range(5f, 10f);
     }
 
     void Update()
     {
-        float newPosY = transform.position.y - _fallingSpeed;
+        float newPosY = transform.position.y - Time.deltaTime * _fallingSpeed;
         transform.position = new Vector2(transform.position.x, newPosY);
     }
 
