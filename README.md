@@ -1,4 +1,4 @@
-# SpaceShooter — Shattered Horzion
+# SpaceShooter — Shattered Horizon
 A simple endless bullet-hell game.
 
 
