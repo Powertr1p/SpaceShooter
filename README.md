@@ -1,5 +1,5 @@
-# SpaceShooter
-A simple endless bullet-hell game
+# SpaceShooter — Shattered Horzion
+A simple endless bullet-hell game.
 
 
 Its a kinda rework of my first game but on Unity engine. There a lot of improvements since my first project on AppGameKit.
@@ -22,5 +22,7 @@ This Space Shooter have a:
 — powerups (shield and "kill all enemies on screen")
 
 — non-static background with moving stars (with kinda parallax effects)
+
+— Looped background music, and other SFX
 
 — different enemies.
