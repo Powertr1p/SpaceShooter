@@ -8,6 +8,7 @@ In this project you can use scriptable objects like "waypoints of enemies" and "
 !!!Optimized for 9:16 resolution!!!
 
 This Space Shooter have a:
+
 — menu with UI 
 — a mechanics to pause game
 — some simpliest VFX created via particles
