@@ -1,6 +1,7 @@
 # SpaceShooter — Shattered Horizon
 A simple endless bullet-hell game.
 
+VIDEO: https://www.youtube.com/watch?v=YcfNM6yXweU&feature=youtu.be 
 
 Its a kinda rework of my first game but on Unity engine. There a lot of improvements since my first project on AppGameKit.
 In this project you can use scriptable objects like "waypoints of enemies" and "paths".
